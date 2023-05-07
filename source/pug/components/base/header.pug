@@ -22,7 +22,7 @@ mixin header(headerMods, currentUrl)
         text: "Контакты и доставка"
       },
       {
-        href: "#",
+        href: "tender.html",
         text: "У вас тендер?"
       },
     ]
@@ -61,9 +61,9 @@ mixin header(headerMods, currentUrl)
                 else
                   a.main-nav__link(href=link.href)=link.text
         .main-nav__contacts
-          .main-nav__social
+          .main-nav__social.social
             a(href="#")
               +icon("icon-watsapp", 25, 25)
             a(href="#")
               +icon("icon-telegram", 25, 25)
-          a(href="tel:+88007004267").main-nav__tel 8 (800) 700 - 42 - 67
+          a(href="tel:+88007004267").main-nav__tel 8(800)700 - 42 - 67

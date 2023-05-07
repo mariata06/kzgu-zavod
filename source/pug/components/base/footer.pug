@@ -1,3 +1,103 @@
 mixin footer(footerMods)
+  -
+    const footerLinks = [
+      [
+        {
+        href: "catalog.html",
+        text: "Каталог продукции",
+        class: "main"
+        },
+        {
+          href: "diesel-generators.html",
+          text: "Дизельные генераторы"
+        },
+        {
+          href: "block-container-1.html",
+          text: "Блок-контейнер под оборудование"
+        },
+        {
+          href: "block-container-2.html",
+          text: "Блок-контейнер под металлоконструкции"
+        },
+        {
+          href: "additional-equipment.html",
+          text: "Дополнительное оборудование"
+        },
+      ],
+      [
+        {
+        href: "company.html",
+        text: "О компании",
+        class: "main"
+        },
+        {
+          href: "reviews.html",
+          text: "Отзывы"
+        },
+        {
+          href: "сertificates.html",
+          text: "Сертификаты"
+        },
+      ],
+      [
+        {
+        href: "news.html",
+        text: "Новости",
+        class: "main"
+        },
+        {
+          href: "blog.html",
+          text: "Блог",
+          class: "main"
+        },
+        {
+          href: "contacts.html",
+          text: "Контакты и доставка",
+          class: "main"
+        },
+        {
+          href: "tender.html",
+          text: "У вас тендер?",
+          class: "main"
+        },
+      ]
+    ]
+
   footer.footer(class=footerMods)
     .container
+      .footer__wrapper
+        if(currentUrl === "index.html")
+          //- lighthouse снимает 10 баллов SEO за <a> без href
+          span.footer__logo
+            +img("content", "logo", "png", 183, 55)
+        else
+          a.footer__logo(href="index.html", aria-label="Переход на главную")
+            +img("content", "logo", "png", 183, 55)
+        .footer__social.social
+          a(href="#")
+            +icon("icon-watsapp", 25, 25)
+          a(href="#")
+            +icon("icon-telegram", 25, 25)
+        .footer__copyright
+          a(href="#") Политика конфиденциальности
+          .footer__buildby
+            span Разработано в&nbsp;
+            a(href="#") Акцент на результат
+          span © 2023, ООО «КЗГУ»
+      .footer__nav.footer-nav
+        .footer-nav__wrapper
+          each list in footerLinks
+            ul.footer-nav__list
+              each link in list
+                - const activeState = currentUrl === link.href
+                li.footer-nav__item
+                  if(activeState)
+                    span.footer-nav__link.is-active=link.text
+                  else
+                    a.footer-nav__link(href=link.href, class=link.class)=link.text
+      .footer__contacts
+        a(href="tel:+88007004267").footer__tel 8(800)700 - 42 - 67
+        p.footer__address Казань, ул. Мазита Гафури, д. 50
+        a(href="mailto:ikuznetsov@kzgu-generacia.ru").footer__mail ikuznetsov@kzgu-generacia.ru
+        p.footer__times Время работы: Будние: 9:00-18:00
+        +btn({text: "Перезвоните мне"}).btn--blue.footer__btn

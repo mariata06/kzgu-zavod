@@ -1,7 +1,68 @@
 .footer {
-  padding: 40px 0;
+  padding: 80px 0;
 
-  background-color: $color-neon-blue;
+  // background-color: $color-neon-blue;
 
   background-color: $color-solitude;
+
+  .container {
+    display: flex;
+  }
+
+  &__wrapper {
+    width: 210px;
+    margin-right: 145px;
+  }
+
+  &__copyright {
+    font-size: 12px;
+      line-height: 20px;
+      font-weight: 400;
+
+    a,
+    span {
+      color: $color-blue-whale;
+      opacity: 50%;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  &__contacts {
+    width: 275px;
+    margin-left: auto;
+  }
+
+  &__address,
+  &__mail,
+  &__times {
+    color: $color-blue-whale;
+    opacity: 50%;
+  }
+
+  &__tel {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 600;
+    opacity: unset;
+    color: $color-blue-whale;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 30px;
+    opacity: 100%;
+  }
+
+  &__social {
+    margin-bottom: 30px;
+
+    a {
+      opacity: 100%;
+    }
+  }
 }
