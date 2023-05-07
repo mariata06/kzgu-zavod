@@ -2,27 +2,53 @@ mixin header(headerMods, currentUrl)
   -
     const headerLinks = [
       {
-        href: "index.html",
-        text: "Главная"
+        href: "catalog.html",
+        text: "Каталог продукции"
+      },
+      {
+        href: "company.html",
+        text: "О компании"
+      },
+      {
+        href: "news.html",
+        text: "Новости"
+      },
+      {
+        href: "projects.html",
+        text: "Реализованные проекты"
+      },
+      {
+        href: "contacts.html",
+        text: "Контакты и доставка"
       },
       {
         href: "#",
-        text: "Страница 2"
-      },
-      {
-        href: "#",
-        text: "Страница 3"
+        text: "У вас тендер?"
       },
     ]
 
   header.header(class=headerMods)
-    .container
-      if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
-      else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
-      nav.main-nav
+
+    nav.main-nav.main-nav--top
+      .container
+        if(currentUrl === "index.html")
+          //- lighthouse снимает 10 баллов SEO за <a> без href
+          span.header__logo
+            +img("content", "logo", "png", 183, 55)
+        else
+          a.header__logo(href="index.html", aria-label="Переход на главную")
+            +img("content", "logo", "png", 183, 55)
+        .search-form
+          form(action="#" metod="POST").form
+            .form__wrapper
+              +custom-input({inputPlaceholder: "Поиск по продукции и разделам"})
+              +icon("icon-search", 17, 17)
+        .geo-location
+          +icon("icon-place", 15, 17)
+          p Казань, ул. Мазита Гафури, д. 50
+        +btn({text: "Оставить заявку"}).btn--blue.header__btn
+    nav.main-nav.main-nav--bottom
+      .container
         button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
           +icon("icon-burger", 20, 20)
         .main-nav__wrapper
@@ -34,3 +60,10 @@ mixin header(headerMods, currentUrl)
                   span.main-nav__link.is-active=link.text
                 else
                   a.main-nav__link(href=link.href)=link.text
+        .main-nav__contacts
+          .main-nav__social
+            a(href="#")
+              +icon("icon-watsapp", 25, 25)
+            a(href="#")
+              +icon("icon-telegram", 25, 25)
+          a(href="tel:+88007004267").main-nav__tel 8 (800) 700 - 42 - 67

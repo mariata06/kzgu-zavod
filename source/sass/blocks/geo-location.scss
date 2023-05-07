@@ -1,0 +1,17 @@
+.geo-location {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+
+  svg {
+    width: 15px;
+    height: 17px;
+    margin-right: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 500;
+  }
+}

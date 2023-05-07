@@ -1,7 +1,8 @@
 .header {
-  padding: 28px 0;
+  // padding: 28px 0;
 
-  background-color: $color-neon-blue;
+  // background-color: $color-neon-blue;
+  background-color: $color-default-white;
 
   .container {
     display: flex;
@@ -9,5 +10,10 @@
 
   &__logo {
     color: $color-default-white;
+    margin-right: 80px;
+  }
+
+  &__btn {
+    margin-left: auto;
   }
 }

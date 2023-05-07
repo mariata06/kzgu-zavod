@@ -13,11 +13,12 @@ body {
 
 html {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: $fz-default;
-  line-height: 24px;
+  line-height: 25px;
   font-family: $ff-placeholder;
-  color: $color-default-black;
+  // color: $color-default-black;
+  color: $color-blue-whale;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -37,6 +38,12 @@ body {
 a {
   color: $color-default-black;
   text-decoration: none;
+  transition: all 0.3s ease-out;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 }
 
 img,

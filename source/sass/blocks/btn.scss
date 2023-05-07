@@ -1,6 +1,7 @@
 .btn {
   display: inline-flex;
   padding: 10px 20px;
+  transition: all 0.3s ease-out;
 
   color: $color-default-white;
 
@@ -23,4 +24,20 @@
   @include hover-focus {
     opacity: 0.8;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
+.btn--blue {
+  background-color: $color-navy-blue;
+  padding: 15px 60px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 600;
 }
