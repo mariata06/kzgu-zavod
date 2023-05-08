@@ -7,4 +7,12 @@
     font-weight: 600;
     margin-bottom: 40px;
   }
+
+  &--h3 {
+    margin: 0;
+    font-size: 38px;
+    line-height: 45px;
+    font-weight: 600;
+    color: $color-default-white;
+  }
 }
