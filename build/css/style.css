@@ -1861,6 +1861,132 @@ button,
   opacity: 1;
 }
 
+.mainscreen {
+  background-color: #e5ecf0;
+  background-color: #f0f3f7;
+  position: relative;
+  z-index: 1;
+}
+.mainscreen__bg-image {
+  position: absolute;
+  z-index: 10;
+}
+.mainscreen__bg-image--left {
+  top: 0;
+  left: 0;
+}
+.mainscreen__bg-image--right {
+  top: 0;
+  right: 0;
+}
+.mainscreen .container {
+  position: relative;
+  z-index: 100;
+}
+.mainscreen__btn {
+  display: inline-block;
+  margin-right: 60px;
+}
+
+.mainscreen__tabs-desc {
+  width: 762px;
+}
+
+.mainscreen__tabs-title {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.mainscreen__tabs-content {
+  padding-top: 80px;
+  padding-bottom: 73px;
+  border-bottom: 1px solid #d7e2ee;
+}
+.mainscreen__tabs-content .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainscreen__tab-content {
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: none;
+}
+.mainscreen__tab-content.is-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainscreen__tabs-control .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mainscreen__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainscreen__paragraph {
+  margin-bottom: 60px;
+}
+
+.mainscreen__wrapper span {
+  font-weight: 600;
+  position: relative;
+  padding-left: 26px;
+}
+.mainscreen__wrapper span::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  background-color: #0f64da;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.mainscreen__tab-control {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.mainscreen__tab-control.is-active {
+  border-top: 2px solid #0f64da;
+  color: #0f64da;
+}
+
+.title {
+  margin: 0;
+}
+.title--h1 {
+  font-size: 42px;
+  line-height: 50px;
+  font-weight: 600;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
