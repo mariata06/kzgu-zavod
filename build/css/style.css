@@ -934,7 +934,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 478px;
   padding: size(14px) 0 28px 0;
 }
 @media screen and (max-width: 767px) {
@@ -1826,6 +1825,9 @@ button,
 .search-form {
   margin-right: 80px;
 }
+.search-form input {
+  width: 478px;
+}
 
 .geo-location {
   display: -webkit-box;
@@ -2110,7 +2112,7 @@ button,
 
 .bestsellers {
   padding-top: 75px;
-  padding-bottom: 90px;
+  padding-bottom: 15px;
 }
 .bestsellers__slide {
   width: 347px;
@@ -2199,6 +2201,55 @@ button,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.consult {
+  padding-top: 90px;
+  padding-bottom: 150px;
+}
+
+.consult__form-wrapper {
+  padding: 40px;
+  background-color: #f0f3f7;
+  margin-bottom: 20px;
+}
+.consult__form-wrapper .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.consult__form-wrapper .form input {
+  width: 315px;
+  border: 1px solid #c8d3e2;
+}
+
+.consult__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.consult__heading .consult__title {
+  width: 517px;
+}
+.consult__heading p {
+  width: 453px;
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.consult__paragraph {
+  font-size: 14px;
+  opacity: 35%;
+}
+.consult__paragraph a {
+  text-decoration: underline;
+  color: #092e47;
 }
 
 /* @mixin hover-focus {

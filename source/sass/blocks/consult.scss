@@ -1,0 +1,44 @@
+.consult {
+  padding-top: 90px;
+  padding-bottom: 150px;
+}
+
+.consult__form-wrapper {
+  padding: 40px;
+  background-color: $color-solitude;
+  margin-bottom: 20px;
+
+  .form {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      width: 315px;
+      border: 1px solid $color-link-water;
+    }
+  }
+}
+
+.consult__heading {
+  display: flex;
+  justify-content: space-between;
+  .consult__title {
+    width: 517px;
+  }
+
+  p {
+    width: 453px;
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+.consult__paragraph {
+  font-size: 14px;
+  opacity: 35%;
+
+  a {
+    text-decoration: underline;
+    color: $color-blue-whale;
+  }
+}

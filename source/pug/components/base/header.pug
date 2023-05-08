@@ -41,7 +41,7 @@ mixin header(headerMods, currentUrl)
         .search-form
           form(action="#" metod="POST").form
             .form__wrapper
-              +custom-input({inputPlaceholder: "Поиск по продукции и разделам"})
+              +custom-input({inputPlaceholder: "Поиск по продукции и разделам", inputType: "text"})
               +icon("icon-search", 17, 17)
         .geo-location
           +icon("icon-place", 15, 17)
