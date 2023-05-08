@@ -1,0 +1,31 @@
+mixin projects()
+  section.projects
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .container
+      .projects__slider
+
+        h2.projects__title.title.title--h1 Реализованные проекты
+        .projects__slider-nav
+          button.btn.btn--slider-prev
+            +icon("icon-arrow-left", 11, 16)
+          button.btn.btn--slider-next
+            +icon("icon-arrow-left", 11, 16)
+        .projects__slider-wrapper
+          .projects__slide
+            a(href="#").projects__item-link
+              .projects__item
+                +img('content', 'project_1', 'png', 698, 400)
+                h4.projects__item-title.title.title--h4 Дизельный гинератор для ООО «Татнефть»
+                .projects__item-wrapper
+                  p.projects__item-desc Произвели дизельный генератор для ООО «Татнефть» , так же установили блок-контейнер под оборудование. Произвели дизельный генератор для ООО «Татнефть» , так же установили блок-контейнер под оборудование
+                  +btn({text: "Получить консультацию"}).btn--white.projects__item-btn
+
+          .projects__slide
+            a(href="#").projects__item-link
+              .projects__item
+                +img('content', 'project_2', 'png', 698, 400)
+                h4.projects__item-title.title.title--h4 Дизельный гинератор для ООО «Татнефть»
+                .projects__item-wrapper
+                  p.projects__item-desc Произвели дизельный генератор для ООО «Татнефть» , так же установили блок-контейнер под оборудование. Произвели дизельный генератор для ООО «Татнефть» , так же установили блок-контейнер под оборудование
+                  +btn({text: "Получить консультацию"}).btn--white.projects__item-btn
