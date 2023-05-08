@@ -1,0 +1,36 @@
+mixin specialist()
+  section.specialist
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .container
+      h2.specialist__title.title.title--h1 Специалисты КЗГУ проектируют оборудование, объединяющее лучшие достижения российских и зарубежных инженеров
+
+      .specialist__content
+        .specialits__img-wrapper
+          +img('content', 'specialist_img', 'png', 887, 420)
+
+          .specialist__numbers
+            .specialist__number
+              span
+                b 16 лет
+              p опыта на рынке генерации
+            .specialist__number
+              span
+                b 1000+
+              p довольных клиентов по РФ
+            .specialist__number
+              span
+                b 50+
+              p специалистов в штате
+
+        .specialist__text
+          p Производим генераторные установки от 10 кВт до 7мВт. Мы можем оказать вам грамотную помощь в подборе и эксплуатации оборудования.
+
+          p В производстве дизельных генераторов в России мы занимаем уверенные позиции: каждая пятая дизельная электростанция в стране производится на Казанском Заводе Генераторных Установок
+
+          .specialist__video
+            .specialist__video-wrapper
+              +img('content', 'video_img', 'png', 170, 170)
+              button(type="button").btn.specialist__video-btn
+                +icon('icon-play', 36, 30)
+            span Посмотрите видео с нашего производства

@@ -1,0 +1,76 @@
+.specialist {
+  background-color: $color-navy-blue;
+  padding: 150px 0;
+
+  &__title {
+    color: $color-default-white;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    width: 453px;
+
+    p {
+      margin: 0;
+      padding-bottom: 20px;
+      color: $color-default-white;
+
+      &:last-of-type {
+        border-bottom: 2px solid $color-default-white;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__video {
+    display: flex;
+    align-items: center;
+
+    span {
+      width: 190px;
+      color: $color-default-white;
+    }
+  }
+
+  &__video-wrapper {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    margin-right: 30px;
+
+    .specialist__video-btn {
+      background-color: transparent;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__numbers {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__number {
+    width: 269px;
+    padding: 10px 0;
+    border-bottom: 2px solid $color-default-white;
+
+    span b {
+      font-size: 48px;
+      line-height: 55px;
+      font-weight: 500;
+      color: $color-default-white;
+    }
+
+    p {
+      margin: 0;
+      color: $color-default-white;
+    }
+  }
+}
