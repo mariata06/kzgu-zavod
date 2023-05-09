@@ -7,8 +7,27 @@ mixin company()
       +breadcrumbs([{link: "index.html", title: "Главная"}, {link: "company.html", title: "О компании"}])
 
       h1.company__title.title.title--h1 Казанский завод генераторных установок
-      p(style="margin-top: 40px;") Текст&nbsp;с&nbsp;мнемониками
 
-      p(style="margin-top: 40px;") Пример использования +img()
-      p(style="margin-bottom: 40px;")
-        +img("content", "placeholder", "png", 120, 120, "Пример")
+      .company__video
+        +img("content/company", "video-poster", "png", 1400, 580, "Пример")
+        button(type="button").btn.btn--play.company__video-btn
+          +icon('icon-video', 140, 120)
+
+      .company__wrapper
+        .company__desc
+          p Производим генераторные установки от 10 кВт до 7мВт. Мы можем оказать вам грамотную помощь в подборе и эксплуатации оборудования.
+          p В производстве дизельных генераторов в России мы занимаем уверенные позиции: каждая пятая дизельная электростанция в стране производится на Казанском Заводе Генераторных Установок.
+
+        .company__numbers
+          .company__number
+            span
+              b 1000+
+            p довольных клиентов по РФ
+          .company__number
+            span
+              b 50+
+            p специалистов в штате
+          .company__number
+            span
+              b 16 лет
+            p опыта на рынке генерации

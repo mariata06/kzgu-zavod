@@ -869,6 +869,11 @@ button,
   opacity: 0.8;
 }
 
+.btn--play {
+  background-color: transparent;
+  padding: 0;
+}
+
 .btn--blue {
   background-color: #0f64da;
   padding: 15px 60px;
@@ -2326,6 +2331,8 @@ button,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .specialist__number {
   width: 269px;
@@ -2846,6 +2853,58 @@ button,
 .banner__img img {
   position: relative;
   z-index: 1000;
+}
+
+.company {
+  padding-bottom: 103px;
+}
+.company__video {
+  position: relative;
+  margin-bottom: 40px;
+}
+.company__video-btn {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+}
+.company__desc {
+  width: 572px;
+}
+.company__desc p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+.company__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.company__numbers {
+  width: 738px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.company__number span b {
+  font-size: 48px;
+  line-height: 55px;
+  font-weight: 500;
+  color: #0f64da;
+}
+.company__number p {
+  margin: 0;
+  color: #092e47;
 }
 
 /* @mixin hover-focus {

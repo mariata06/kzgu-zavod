@@ -1,0 +1,51 @@
+.company {
+  // padding-bottom: 20px;
+  padding-bottom: 103px;
+
+  &__video {
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  &__video-btn {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+
+  &__desc {
+    width: 572px;
+
+    p {
+      margin: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__numbers {
+    width: 738px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__number {
+    span b {
+      font-size: 48px;
+      line-height: 55px;
+      font-weight: 500;
+      color: $color-navy-blue;
+    }
+
+    p {
+      margin: 0;
+      color: $color-blue-whale;
+    }
+  }
+}
