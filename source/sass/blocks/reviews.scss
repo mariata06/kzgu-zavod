@@ -1,0 +1,56 @@
+.reviews {
+  padding-top: 75px;
+  padding-bottom: 75px;
+
+  &__wrapper {
+    border-top: 1px solid $color-solitude-2;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+
+  &__slider {
+    width: 976px;
+    padding-left: 49px;
+    position: relative;
+  }
+
+  &__slider-nav {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__slider-slide {
+    position: relative;
+    &::before {
+      content: url('../img/svg/icon-quotes.svg');
+      display: block;
+      position: absolute;
+      width: 29px;
+      height: 23px;
+      top: 0;
+      left: -40px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 22px;
+      line-height: 30px;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+  }
+
+  &__author {
+    margin-top: 60px;
+  }
+
+  &__author-name {
+    font-weight: 600;
+  }
+
+  &__author-position {
+    opacity: 50%;
+  }
+}

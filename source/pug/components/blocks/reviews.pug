@@ -1,0 +1,26 @@
+mixin reviews()
+  section.reviews
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .container
+      .reviews__wrapper
+        h2.reviews__title.title.title--h1 Отзывы <br> партнеров
+
+        .reviews__slider
+          .reviews__slider-slide
+            p КЗГУ гарантирует качество поставляемого оборудования: прежде, чем отправить заказ клиенту, он проходит ряд испытаний и после успешного завершения отправляется заказчику. На нашем предприятии трудятся более 20 человек и&nbsp;каждый из них профессионал своего дела.
+            p Производим генераторные установки от 10 кВт до 7мВт. Мы можем оказать вам грамотную помощь в подборе и эксплуатации оборудования.
+
+            .reviews__author
+              .reviews__author-name Петров Георгий Михайлович
+              .reviews__author-position Генеральный директор ООО «СтройТехГранд»
+
+          .reviews__slider-nav.slider-nav
+            button.btn.btn--slider-prev
+              +icon("icon-arrow-left", 11, 16)
+            button.btn.btn--slider-next
+              +icon("icon-arrow-left", 11, 16)
+
+
+
+

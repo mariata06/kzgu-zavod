@@ -20,19 +20,6 @@
     }
   }
 
-  // &__product-badge {
-  //   font-size: 14px;
-  //   line-height: 20px;
-  //   color: $color-kelly-green;
-  //   padding: 5px 15px;
-  //   border-radius: 100px;
-  //   background-color: $color-default-white;
-  // }
-
-  // &__product-badge--grey {
-  //   color: $color-blue-whale;
-  // }
-
   &__product-name,
   &__product-features {
     width: 287px;
@@ -75,9 +62,6 @@
   }
 
   &__slider-nav {
-    width: 120px;
-    display: flex;
-    justify-content: space-between;
     position: absolute;
     top: 0;
     right: 0;
