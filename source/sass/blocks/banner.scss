@@ -1,0 +1,60 @@
+.banner {
+  // background-color: $color-navy-blue;
+  // background: linear-gradient(to bottom, #ffffff 83px, blue 83px, blue 303px, #ffffff 303px, #ffffff 350px);
+  // overflow: hidden;
+  // min-height: 350px;
+  position: relative;
+  // padding-top: 103px;
+
+  &__wrapper {
+    background-color: $color-navy-blue;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -100px;
+      right: 155px;
+      z-index: 10;
+      width: 628px;
+      height: 628px;
+      border-radius: 1000px;
+      background-color: $color-denim;
+      // background-color: green;
+      overflow: hidden;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  p {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 816px;
+    font-size: 22px;
+    line-height: 30px;
+    color: $color-default-white;
+    margin: 0;
+    margin-right: 64px;
+  }
+
+  &__img {
+    position: relative;
+    position: absolute;
+    right: 250px;
+    top: -80px;
+
+    img {
+      position: relative;
+      z-index: 1000;
+    }
+  }
+}
