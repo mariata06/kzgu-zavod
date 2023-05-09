@@ -1,0 +1,33 @@
+mixin catalog()
+  section.catalog
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .container
+
+      +breadcrumbs([{link: "index.html", title: "Главная"}, {link: "catalog.html", title: "Каталог продукции"}])
+
+      h1.catalog__title.title.title--h1 Каталог продукции
+      .catalog__list
+        a(href="categorie.html").catalog__section
+          .catalog__item
+            span.catalog__section-badge.badge 320 товаров
+            +img('content/catalog', 'cat-section1', 'png', 222, 196)
+            p.catalog__section-name Дизельные генераторы
+
+        a(href="categorie.html").catalog__section
+          .catalog__item
+            span.catalog__section-badge.badge 102 товара
+            +img('content/catalog', 'cat-section2', 'png', 288, 163)
+            p.catalog__section-name Блок-контейнер под оборудование
+
+        a(href="categorie.html").catalog__section
+          .catalog__item
+            span.catalog__section-badge.badge 320 товаров
+            +img('content/catalog', 'cat-section3', 'png', 232, 205)
+            p.catalog__section-name Блок-контейнер под металлоконструкции
+
+        a(href="categorie.html").catalog__section
+          .catalog__item
+            span.catalog__section-badge.badge 55 товаров
+            +img('content/catalog', 'cat-section4', 'png', 250, 220)
+            p.catalog__section-name Дополнительное оборудование

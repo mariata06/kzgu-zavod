@@ -1,0 +1,52 @@
+.catalog {
+  padding-bottom: 60px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 698px;
+    min-height: 365px;
+    background-color: $color-solitude;
+    transition: all 0.3s ease-out;
+    padding: 10px;
+    margin-bottom: 4px;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      // margin: auto;
+      // margin-top: 72px;
+      // margin-bottom: 72px;
+    }
+  }
+
+  &__section:hover {
+    .catalog__item {
+      background-color: $color-solitude-3;
+    }
+
+    .catalog__section-name {
+      color: $color-navy-blue;
+    }
+  }
+
+  &__section-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  &__section-name {
+    margin: 0;
+    position: absolute;
+    bottom: 25px;
+    left: 30px;
+  }
+}
