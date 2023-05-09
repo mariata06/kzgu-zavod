@@ -1,0 +1,27 @@
+mixin certificate()
+  section.certificate
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .container
+      h2.certificate__title.title.title--h1 Сертификаты
+
+      .certificate__content
+        a(href="img/content/company/cert-1@2x.png" target="_blank").certificate__item-link
+          .certificate__item
+            +img("content/company", "cert-1", "png", 216, 310, "Сертификат")
+
+        a(href="img/content/company/cert-2@2x.png" target="_blank").certificate__item-link
+          .certificate__item
+            +img("content/company", "cert-2", "png", 216, 310, "Сертификат")
+
+        a(href="img/content/company/cert-3@2x.png" target="_blank").certificate__item-link
+          .certificate__item
+            +img("content/company", "cert-3", "png", 216, 310, "Сертификат")
+
+        a(href="img/content/company/cert-4@2x.png" target="_blank").certificate__item-link
+          .certificate__item
+            +img("content/company", "cert-4", "png", 216, 310, "Сертификат")
+
+        a(href="img/content/company/cert-5@2x.png" target="_blank").certificate__item-link
+          .certificate__item
+            +img("content/company", "cert-5", "png", 216, 310, "Сертификат")

@@ -2741,6 +2741,58 @@ button,
   opacity: 50%;
 }
 
+.certificate {
+  padding-top: 65px;
+  padding-bottom: 75px;
+}
+.certificate__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.certificate__item-link {
+  position: relative;
+}
+.certificate__item-link::after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(15, 100, 218, 0.65);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.certificate__item-link::before {
+  content: url(../img/svg/icon-search.svg);
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 1000;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.certificate__item-link:hover::after, .certificate__item-link:hover::before {
+  opacity: 1;
+}
+.certificate__item {
+  padding: 30px;
+  background-color: #f0f3f7;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
