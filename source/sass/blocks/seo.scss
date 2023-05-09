@@ -1,0 +1,14 @@
+.seo {
+  padding-top: 75px;
+  padding-bottom: 150px;
+
+  a {
+    color: $color-navy-blue;
+  }
+
+  p {
+    background: -webkit-linear-gradient(rgba(09, 46, 71, 1), rgba(09, 46, 71, 0.3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

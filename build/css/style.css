@@ -2568,6 +2568,19 @@ button,
   position: relative;
 }
 
+.seo {
+  padding-top: 75px;
+  padding-bottom: 150px;
+}
+.seo a {
+  color: #0f64da;
+}
+.seo p {
+  background: -webkit-linear-gradient(rgb(9, 46, 71), rgba(9, 46, 71, 0.3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
