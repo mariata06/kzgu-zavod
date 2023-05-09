@@ -1,0 +1,14 @@
+mixin company()
+  section.company
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .container
+
+      +breadcrumbs([{link: "index.html", title: "Главная"}, {link: "company.html", title: "О компании"}])
+
+      h1.company__title.title.title--h1 Казанский завод генераторных установок
+      p(style="margin-top: 40px;") Текст&nbsp;с&nbsp;мнемониками
+
+      p(style="margin-top: 40px;") Пример использования +img()
+      p(style="margin-bottom: 40px;")
+        +img("content", "placeholder", "png", 120, 120, "Пример")
