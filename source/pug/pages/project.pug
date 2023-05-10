@@ -14,5 +14,10 @@ block main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
     //- +intro()
+    +breadcrumbs([{link: "index.html", title: "Главная"}, {link: "projects.html", title: "Реализованные проекты"}, {link: "project.html", title: "Поставка резервного источника электроснабжения КЗГУ"}])
+    +gallery()
+    +project-details()
+    +projects(projectsHome)
+    +consult()
 
 block modals
