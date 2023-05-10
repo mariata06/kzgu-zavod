@@ -2956,6 +2956,18 @@ button,
           transform: rotate(180deg);
 }
 
+.news-item {
+  padding-bottom: 150px;
+}
+.news-item p {
+  width: 1049px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.news-item img {
+  margin-bottom: 30px;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {

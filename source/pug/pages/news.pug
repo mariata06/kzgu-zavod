@@ -14,7 +14,9 @@ block main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
     //- +intro()
-    +all-news()
+    +breadcrumbs([{link: "index.html", title: "Главная"}, {link: "news.html", title: "Новости"}])
+    +all-news(allnews)
+    +pagination()
     +consult()
 
 block modals

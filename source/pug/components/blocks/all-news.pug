@@ -1,16 +1,12 @@
-mixin all-news()
+mixin all-news(data)
   section.all-news
     //- вставлять блоки во внешний контейнер неверно
     //- все блоки содержат в себе container без доп класса tutorial__wrapper
     .container
 
-      +breadcrumbs([{link: "index.html", title: "Главная"}, {link: "news.html", title: "Новости"}])
-
       .all-news__content
         h2.last-news__title.title.title--h1 Новости
 
         .all-news__wrapper
-          each news in allnews
+          each news in data
             +news-card(news)
-
-      +pagination()

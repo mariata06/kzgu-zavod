@@ -1,13 +1,12 @@
 mixin breadcrumbs(data)
 
   .breadcrumbs&attributes(attributes)
-    ul.breadcrumbs__list
-      each item in data
-        li.breadcrumbs__item
-          if (item.icon)
-            a.breadcrumbs__icon(href!=item.link, aria-label="home")
-              +icon(item.icon.name, item.icon.width, item.icon.heigth)
-          else
-            a.breadcrumbs__link(href!=item.link)!=item.title
-
-          //- +icon("icon-arrow-right-small", 11, 15).breadcrumbs__arrow
+    .container
+      ul.breadcrumbs__list
+        each item in data
+          li.breadcrumbs__item
+            if (item.icon)
+              a.breadcrumbs__icon(href!=item.link, aria-label="home")
+                +icon(item.icon.name, item.icon.width, item.icon.heigth)
+            else
+              a.breadcrumbs__link(href!=item.link)!=item.title
