@@ -16,6 +16,17 @@
     justify-content: center;
     align-items: center;
 
+    &:hover,
+    &:focus {
+      color: $color-default-white;
+      border: 1px solid $color-navy-blue;
+      background-color: $color-navy-blue;
+
+      svg {
+        stroke: $color-default-white;
+      }
+    }
+
     svg {
       stroke: $color-black-rock;
     }

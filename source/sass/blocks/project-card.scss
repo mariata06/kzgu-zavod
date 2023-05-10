@@ -1,0 +1,41 @@
+.project-card {
+  width: 698px;
+  position: relative;
+
+  &:hover {
+    .project-card__wrapper {
+      opacity: 90%;
+    }
+  }
+
+  &__wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    background-color: $color-navy-blue;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    align-content: flex-end;
+  }
+
+  &__title {
+    width: 287px;
+    margin-bottom: 125px;
+    color: $color-default-white;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 1000;
+  }
+
+  &__desc {
+    color: $color-default-white;
+    margin-bottom: 30px;
+  }
+}
