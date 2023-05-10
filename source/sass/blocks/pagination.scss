@@ -1,0 +1,29 @@
+.pagination {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__page {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 600;
+    margin: 0 2.5px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $color-periwinkle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      stroke: $color-black-rock;
+    }
+  }
+
+  &__page:last-of-type {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}

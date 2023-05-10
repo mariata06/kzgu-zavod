@@ -1,0 +1,41 @@
+.news-card {
+  width: 454px;
+  margin-bottom: 40px;
+
+  a {
+    color: $color-navy-blue;
+  }
+
+  &__img {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    z-index: 100;
+
+    &:hover {
+      &::after {
+        opacity: 40%;
+      }
+    }
+  }
+
+  &__img::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: $color-navy-blue;
+    opacity: 0;
+    z-index: 1000;
+    transition: all 0.3s ease-out;
+  }
+
+  &__date {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2000;
+  }
+}
