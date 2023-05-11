@@ -1,0 +1,44 @@
+.delivery {
+  padding-top: 75px;
+  padding-bottom: 75px;
+
+  p {
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  table {
+    width: 100%;
+    border: 0;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+
+    tr td {
+      width: 32%;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    tr {
+      td:last-of-type,
+      td:first-of-type {
+        width: 233px;
+        width: 16%;
+      }
+    }
+
+    tr td:first-of-type {
+      padding-left: 10px;
+    }
+
+    tr:nth-child(odd) {
+      background-color: $color-solitude;
+    }
+
+    tr:nth-child(even) {
+      background-color: $color-solitude-4;
+    }
+  }
+}

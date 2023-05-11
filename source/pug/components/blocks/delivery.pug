@@ -1,0 +1,72 @@
+mixin delivery()
+  -
+    const delivery = [
+      {
+        number: '01',
+        city: 'Москва',
+        terms: '5 дней',
+        price: '5000 руб.'
+      },
+      {
+        number: '02',
+        city: 'Москва',
+        terms: '5 дней',
+        price: '5000 руб.'
+      },
+      {
+        number: '03',
+        city: 'Москва',
+        terms: '5 дней',
+        price: '5000 руб.'
+      },
+      {
+        number: '04',
+        city: 'Москва',
+        terms: '5 дней',
+        price: '5000 руб.'
+      },
+      {
+        number: '05',
+        city: 'Москва',
+        terms: '5 дней',
+        price: '5000 руб.'
+      },
+      {
+        number: '06',
+        city: 'Москва',
+        terms: '5 дней',
+        price: '5000 руб.'
+      },
+      {
+        number: '07',
+        city: 'Москва',
+        terms: '5 дней',
+        price: '5000 руб.'
+      },
+      {
+        number: '08',
+        city: 'Москва',
+        terms: '5 дней',
+        price: '5000 руб.'
+      },
+    ]
+  section.delivery
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .container
+      h2.delivery__title.title.title--h1 Доставка
+      p КЗГУ осуществляет доставку оборудования непосредственно к месту службы. Мы отвечаем за все организационные моменты: начиная от оформления необходимой документации, заканчивая выбором способа отгрузки. Установки доставляются с помощью различных видов транспорта
+
+      table.delivery__table
+        //- thead
+        //-   tr
+        //-     each title in ['номер по порядку', 'город', 'сроки доставки', 'стоимость']
+        //-       th=title
+        tbody
+          each row in delivery
+            tr.delivery__table-row
+
+              td !{row.number}
+              td !{row.city}
+              td !{row.terms}
+              td !{row.price}
