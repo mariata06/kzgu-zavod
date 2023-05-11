@@ -17,6 +17,6 @@ block main
     +breadcrumbs([{link: "index.html", title: "Главная"}, {link: "news.html", title: "Новости"}])
     +all-news(allnews)
     +pagination()
-    +consult()
+    +consult(false, false, {formTitle: 'Нужна консультация?', formNote: 'Оставьте заявку и наш специалист<br>перезвонит вам в ближайшее время'})
 
 block modals

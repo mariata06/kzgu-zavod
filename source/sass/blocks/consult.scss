@@ -7,17 +7,19 @@
   padding: 40px;
   background-color: $color-solitude;
   margin-bottom: 20px;
-
-  .form {
-    display: flex;
-    justify-content: space-between;
-
-    input {
-      width: 315px;
-      border: 1px solid $color-link-water;
-    }
-  }
 }
+
+// .form {
+//   display: flex;
+//   justify-content: space-between;
+
+//   input[type="text"],
+//   input[type="tel"],
+//   input[type="email"] {
+//     width: 315px;
+//     border: 1px solid $color-link-water;
+//   }
+// }
 
 .consult__heading {
   display: flex;
@@ -27,7 +29,7 @@
   }
 
   p {
-    width: 453px;
+    // width: 453px;
     font-size: 22px;
     line-height: 30px;
   }

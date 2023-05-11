@@ -1,20 +1,28 @@
-mixin consult()
+mixin consult(messageField, uploadFile, {formTitle, formNote})
   section.consult
     //- вставлять блоки во внешний контейнер неверно
     //- все блоки содержат в себе container без доп класса tutorial__wrapper
     .container
       .consult__heading
-        h2.consult__title.title.title--h1 Нужна консультация или расчет стоимости?
-        p Оставьте заявку и наш специалист перезвонит вам в ближайшее время
+        h2.consult__title.title.title--h1 !{formTitle}
+        p !{formNote}
 
       .consult__form-wrapper
-        form(action="#" metod="POST").form
+        form(action="#" metod="POST")&attributes(attributes).form
           .form__wrapper
             +custom-input({inputPlaceholder: "Ваше имя", inputType: "text"})
           .form__wrapper
             +custom-input({inputPlaceholder: "Ваш телефон", inputType: "tel"})
           .form__wrapper
             +custom-input({inputPlaceholder: "E-mail", inputType: "email"})
+
+          if(messageField)
+            .form__wrapper
+              +custom-textarea({inputPlaceholder: "Комментарий"})
           +btn({text: "Отправить заявку"}).btn--blue.consult__form-submit
+
+          if(uploadFile)
+            .form__wrapper
+              +custom-input({inputType: "file", inputLabel: "Прикрепить файл", inputIcon: ['icon-upload', 14, 18]})
 
       p.consult__paragraph Нажимая кнопку «Отправить заявку», вы соглашаетесь  с обработкой <a href="#">Персональных данных</a>

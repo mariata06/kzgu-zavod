@@ -5,3 +5,14 @@
     width: 478px;
   }
 }
+
+.search-form .form__wrapper {
+  svg {
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    right: 19px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

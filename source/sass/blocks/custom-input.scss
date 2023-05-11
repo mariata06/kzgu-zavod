@@ -22,6 +22,11 @@
       flex-direction: column;
     }
 
+    textarea::placeholder {
+      color: $color-blue-whale;
+      opacity: 50%;
+    }
+
     input::placeholder {
       color: $color-blue-whale;
       opacity: 50%;
@@ -120,5 +125,29 @@
     &.is-valid {
       color: #15ab07;
     }
+  }
+
+  input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .custom-input__label {
+    color: $color-navy-blue;
+    cursor: pointer;
+  }
+}
+
+.custom-input {
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 20px;
+    order: -1
   }
 }

@@ -883,6 +883,9 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-weight: 600;
   font-size: 16px;
   line-height: 25px;
@@ -986,6 +989,27 @@ button,
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+.custom-input label textarea::-webkit-input-placeholder, .custom-textarea label textarea::-webkit-input-placeholder {
+  color: #092e47;
+  opacity: 50%;
+}
+.custom-input label textarea::-moz-placeholder, .custom-textarea label textarea::-moz-placeholder {
+  color: #092e47;
+  opacity: 50%;
+}
+.custom-input label textarea:-ms-input-placeholder, .custom-textarea label textarea:-ms-input-placeholder {
+  color: #092e47;
+  opacity: 50%;
+}
+.custom-input label textarea::-ms-input-placeholder, .custom-textarea label textarea::-ms-input-placeholder {
+  color: #092e47;
+  opacity: 50%;
+}
+.custom-input label textarea::placeholder,
+.custom-textarea label textarea::placeholder {
+  color: #092e47;
+  opacity: 50%;
 }
 .custom-input label input::-webkit-input-placeholder, .custom-textarea label input::-webkit-input-placeholder {
   color: #092e47;
@@ -1110,6 +1134,35 @@ button,
 .custom-input .input-message.is-valid,
 .custom-textarea .input-message.is-valid {
   color: #15ab07;
+}
+.custom-input input[type=file],
+.custom-textarea input[type=file] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.custom-input .custom-input__label,
+.custom-textarea .custom-input__label {
+  color: #0f64da;
+  cursor: pointer;
+}
+
+.custom-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.custom-input svg {
+  margin-right: 20px;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 
 .custom-toggle {
@@ -1827,13 +1880,69 @@ button,
   color: #ff0000;
 }
 
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.form input[type=text],
+.form input[type=tel],
+.form input[type=email] {
+  width: 315px;
+  border: 1px solid #c8d3e2;
+}
+
 .form__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
 }
-.form__wrapper svg {
+
+.form--delivery input[type=text],
+.form--delivery input[type=tel],
+.form--delivery input[type=email],
+.form--delivery .btn--blue {
+  width: 426px;
+}
+.form--delivery .form__wrapper .custom-textarea {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.form--delivery .custom-textarea {
+  width: 100%;
+  min-width: 1320px;
+  border: 1px solid #c8d3e2;
+}
+.form--delivery .custom-textarea label textarea {
+  width: 100%;
+  max-width: unset;
+  min-height: 210px;
+}
+.form--delivery .form__wrapper:last-of-type {
+  margin-right: auto;
+  margin-left: 40px;
+}
+
+.search-form {
+  margin-right: 80px;
+}
+.search-form input {
+  width: 478px;
+}
+
+.search-form .form__wrapper svg {
   width: 17px;
   height: 17px;
   position: absolute;
@@ -1842,13 +1951,6 @@ button,
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-}
-
-.search-form {
-  margin-right: 80px;
-}
-.search-form input {
-  width: 478px;
 }
 
 .geo-location {
@@ -2231,18 +2333,6 @@ button,
   background-color: #f0f3f7;
   margin-bottom: 20px;
 }
-.consult__form-wrapper .form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.consult__form-wrapper .form input {
-  width: 315px;
-  border: 1px solid #c8d3e2;
-}
 
 .consult__heading {
   display: -webkit-box;
@@ -2256,7 +2346,6 @@ button,
   width: 517px;
 }
 .consult__heading p {
-  width: 453px;
   font-size: 22px;
   line-height: 30px;
 }

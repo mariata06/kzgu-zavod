@@ -17,6 +17,6 @@ block main
     +breadcrumbs([{link: "index.html", title: "Главная"}, {link: "projects.html", title: "Реализованные проекты"}])
     +projects(projectsAll)(class="projects--page")
     +pagination()
-    +consult()
+    +consult(false, false, {formTitle: 'Нужна консультация?', formNote: 'Оставьте заявку и наш специалист<br>перезвонит вам в ближайшее время'})
 
 block modals

@@ -1,13 +1,72 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+
+  // &__wrapper {
+  //   display: flex;
+  //   position: relative;
+
+  //   svg {
+  //     width: 17px;
+  //     height: 17px;
+  //     position: absolute;
+  //     right: 19px;
+  //     top: 50%;
+  //     transform: translateY(-50%);
+  //   }
+  // }
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    width: 315px;
+    border: 1px solid $color-link-water;
+  }
+}
+
 .form__wrapper {
   display: flex;
   position: relative;
+}
 
-  svg {
-    width: 17px;
-    height: 17px;
-    position: absolute;
-    right: 19px;
-    top: 50%;
-    transform: translateY(-50%);
+
+.form--delivery {
+  // .custom-input, .btn--blue {
+  //   // width: 33%;
+  //   width: 426px;
+  // }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  .btn--blue {
+    width: 426px;
+  }
+
+  .form__wrapper .custom-textarea {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .custom-textarea {
+    width: 100%;
+    min-width: 1320px;
+    border: 1px solid $color-link-water;
+  }
+
+  .custom-textarea label textarea {
+    width: 100%;
+    max-width: unset;
+    min-height: 210px;
+  }
+
+  .form__wrapper:last-of-type {
+    margin-right: auto;
+    margin-left: 40px;
   }
 }
