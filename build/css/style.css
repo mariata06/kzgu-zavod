@@ -2615,6 +2615,9 @@ button,
   width: 124px;
   height: 85px;
 }
+.gallery--project {
+  padding-bottom: 40px;
+}
 
 .slider-nav {
   width: 120px;
@@ -2987,6 +2990,40 @@ button,
 .project-card__desc {
   color: #ffffff;
   margin-bottom: 30px;
+}
+
+.project-details {
+  padding-bottom: 75px;
+}
+.project-details p {
+  margin: 0;
+  margin-bottom: 15px;
+  width: 1050px;
+}
+.project-details p:last-of-type {
+  margin-bottom: 0;
+}
+.project-details ul {
+  margin: 0;
+  padding-left: 30px;
+}
+
+.contacts {
+  padding-bottom: 75px;
+}
+.contacts ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contacts li {
+  padding: 0 10px;
+  padding-right: 40px;
+  border-left: 2px solid #0f64da;
 }
 
 /* @mixin hover-focus {

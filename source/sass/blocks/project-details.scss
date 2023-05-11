@@ -1,0 +1,18 @@
+.project-details {
+  padding-bottom: 75px;
+  
+  p {
+    margin: 0;
+    margin-bottom: 15px;
+    width: 1050px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 30px;
+  }
+}

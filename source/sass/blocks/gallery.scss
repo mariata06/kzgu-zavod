@@ -41,10 +41,12 @@
     }
 
     img {
-      // z-index: 1;
       width: 124px;
       height: 85px;
-      // position: relative;
     }
+  }
+
+  &--project {
+    padding-bottom: 40px;
   }
 }

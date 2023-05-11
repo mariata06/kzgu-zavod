@@ -14,5 +14,7 @@ block main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
     //- +intro()
-
+    +breadcrumbs([{link: "index.html", title: "Главная"}, {link: "contacts.html", title: "Контакты и доставка"}])
+    +contacts()
+    
 block modals
