@@ -1,0 +1,26 @@
+.power-search__type {
+  padding: 20px;
+  border: 1px solid $color-solitude-2;
+
+  p {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      // margin: 0 7.5px;
+      margin-right: 15px;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      color: $color-navy-blue;
+    }
+  }
+}

@@ -953,6 +953,12 @@ button,
           transform: translate(-50%, -50%) rotate(180deg);
 }
 
+.btn--bluetext {
+  padding: 5px 15px;
+  background-color: transparent;
+  color: #0f64da;
+}
+
 .custom-input,
 .custom-textarea {
   position: relative;
@@ -1935,10 +1941,10 @@ button,
   margin-left: 40px;
 }
 
-.search-form {
+.search-form .form {
   margin-right: 80px;
 }
-.search-form input {
+.search-form .form input {
   width: 478px;
 }
 
@@ -2564,6 +2570,7 @@ button,
 .projects--page .projects__slider-wrapper {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 .seo {
@@ -3149,6 +3156,124 @@ button,
 }
 .delivery table tr:nth-child(even) {
   background-color: #e5e9ef;
+}
+
+.power-search__type {
+  padding: 20px;
+  border: 1px solid #e1e8fb;
+}
+.power-search__type p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+.power-search__type ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.power-search__type ul li {
+  margin-right: 15px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #0f64da;
+}
+
+.engine-table {
+  width: 985px;
+  margin-bottom: 40px;
+}
+.engine-table table {
+  border-collapse: separate;
+  border-spacing: 5px;
+  width: 100%;
+}
+.engine-table tbody tr:nth-child(odd) {
+  background-color: #f0f3f7;
+}
+.engine-table tbody tr:nth-child(even) {
+  background-color: #e6ecf3;
+}
+.engine-table thead tr {
+  background-color: #0f64da;
+}
+.engine-table table td,
+.engine-table table th {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.engine-table table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 5px;
+}
+.engine-table table tr th,
+.engine-table table tr td {
+  min-width: 127px;
+}
+.engine-table table tr th:first-of-type,
+.engine-table table tr td:first-of-type {
+  min-width: 100px;
+}
+.engine-table table tr th:nth-child(2),
+.engine-table table tr th:last-of-type,
+.engine-table table tr td:nth-child(2),
+.engine-table table tr td:last-of-type {
+  min-width: 300px;
+}
+.engine-table table tr td:last-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.engine-table table thead {
+  background-color: #0f64da;
+}
+.engine-table table th {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+}
+.engine-table table th svg {
+  min-width: 8px;
+  min-height: 4px;
+  margin-left: 5px;
+  fill: white;
+}
+.engine-table table th:first-of-type, .engine-table table th:last-of-type {
+  width: 100px;
+}
+.engine-table table th:first-of-type svg, .engine-table table th:last-of-type svg {
+  display: none;
+}
+.engine-table table tr td:last-of-type {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /* @mixin hover-focus {

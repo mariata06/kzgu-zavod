@@ -1,0 +1,97 @@
+.engine-table {
+  width: 985px;
+  margin-bottom: 40px;
+
+  table {
+    // border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 5px;
+    width: 100%;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: $color-solitude;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: $color-solitude-3;
+  }
+
+  thead tr {
+    background-color: $color-navy-blue;
+  }
+
+  table td,
+  table th {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  table tr {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+
+  table tr th,
+  table tr td {
+    min-width: 127px;
+  }
+
+  table tr th:first-of-type,
+  table tr td:first-of-type {
+    min-width: 100px;
+  }
+
+  table tr th:nth-child(2),
+  table tr th:last-of-type,
+  table tr td:nth-child(2),
+  table tr td:last-of-type {
+    min-width: 300px;
+  }
+
+  table tr td:last-of-type {
+    display: flex;
+  }
+
+  table thead {
+    background-color: $color-navy-blue;
+  }
+
+  table th {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-default-white;
+    // background-color: $color-navy-blue;
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    text-align: left;
+
+    svg {
+      min-width: 8px;
+      min-height: 4px;
+      margin-left: 5px;
+      // display: block;
+      fill: white;
+    }
+
+    &:first-of-type,
+    &:last-of-type {
+      width: 100px;
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  table tr td:last-of-type {
+    justify-content: space-between;
+  }
+}

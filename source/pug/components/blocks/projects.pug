@@ -15,20 +15,5 @@ mixin projects(data)
           each slide in data
             .projects__slide
               +project-card(slide)
-          //-   a(href="#").projects__item-link
-          //-     .projects__item
-          //-       +img('content', 'project_1', 'png', 698, 400)
-          //-       h4.projects__item-title.title.title--h4 Дизельный гинератор для ООО «Татнефть»
-          //-       .projects__item-wrapper
-          //-         p.projects__item-desc Произвели дизельный генератор для ООО «Татнефть» , так же установили блок-контейнер под оборудование. Произвели дизельный генератор для ООО «Татнефть» , так же установили блок-контейнер под оборудование
-          //-         +btn({text: "Получить консультацию"}).btn--white.projects__item-btn
 
-          //- .projects__slide
-          //-   +project-card()
-          //-   a(href="#").projects__item-link
-          //-     .projects__item
-          //-       +img('content', 'project_2', 'png', 698, 400)
-          //-       h4.projects__item-title.title.title--h4 Дизельный гинератор для ООО «Татнефть»
-          //-       .projects__item-wrapper
-          //-         p.projects__item-desc Произвели дизельный генератор для ООО «Татнефть» , так же установили блок-контейнер под оборудование. Произвели дизельный генератор для ООО «Татнефть» , так же установили блок-контейнер под оборудование
-          //-         +btn({text: "Получить консультацию"}).btn--white.projects__item-btn
+        +pagination()
