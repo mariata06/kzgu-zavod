@@ -16,6 +16,13 @@
     color: $color-default-white;
   }
 
+  &--product {
+    margin: 0;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 500;
+  }
+
   &--h4 {
     margin: 0;
     font-size: 22px;

@@ -1,11 +1,11 @@
-mixin bestsellers()
+mixin bestsellers(title)
   section.bestsellers
     //- вставлять блоки во внешний контейнер неверно
     //- все блоки содержат в себе container без доп класса tutorial__wrapper
     .container
       .bestsellers__slider
 
-        h2.bestsellers__title.title.title--h1 Популярная продукция
+        h2.bestsellers__title.title.title--h1 !{title}
         .bestsellers__slider-nav.slider-nav
           button.btn.btn--slider-prev
             +icon("icon-arrow-left", 11, 16)
@@ -13,7 +13,7 @@ mixin bestsellers()
             +icon("icon-arrow-left", 11, 16)
         .bestsellers__slider-wrapper
           .bestsellers__slide
-            a(href="#").bestsellers__product-link
+            a(href="product.html").bestsellers__product-link
               .bestsellers__product
                 span.bestsellers__product-badge.badge.badge--green в наличии
                 +img('slides', 'product_1', 'png', 210, 185)
@@ -27,7 +27,7 @@ mixin bestsellers()
                 +btn({text: 'Узнать цену'}).btn--blue
 
           .bestsellers__slide
-            a(href="#").bestsellers__product-link
+            a(href="product.html").bestsellers__product-link
               .bestsellers__product
                 span.bestsellers__product-badge.badge.badge--green в наличии
                 +img('slides', 'product_2', 'png', 210, 185)
@@ -41,7 +41,7 @@ mixin bestsellers()
                 +btn({text: 'Узнать цену'}).btn--blue
 
           .bestsellers__slide
-            a(href="#").bestsellers__product-link
+            a(href="product.html").bestsellers__product-link
               .bestsellers__product
                 span.bestsellers__product-badge.badge под заказ
                 +img('slides', 'product_3', 'png', 210, 185)
@@ -55,7 +55,7 @@ mixin bestsellers()
                 +btn({text: 'Узнать цену'}).btn--blue
 
           .bestsellers__slide
-            a(href="#").bestsellers__product-link
+            a(href="product.html").bestsellers__product-link
               .bestsellers__product
                 span.bestsellers__product-badge.badge.badge--green в наличии
                 +img('slides', 'product_4', 'png', 210, 185)

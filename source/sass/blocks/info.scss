@@ -44,6 +44,10 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 81px;
+
+    svg {
+      fill: $color-default-white;
+    }
   }
 
   &__content {

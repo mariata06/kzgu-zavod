@@ -1,0 +1,85 @@
+mixin product()
+  section.product
+
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .container
+      h1.product__title.visually-hidden Дизельный генератор
+
+      .product__wrapper
+        .product__gallery
+          .product__gallery-wrapper
+            .product__main-img
+              +img('slides/product', 'Еuropower-EPS-300-DXE-DC', 'png', '452', '390')
+            .product__slider-preview
+              .product__slider-nav.slider-nav
+                button.btn.btn--slider-prev.btn--slider-small
+                  +icon("icon-arrow-left", 4, 7)
+                button.btn.btn--slider-next.btn--slider-small
+                  +icon("icon-arrow-left", 4, 7)
+              .product__slider-wrapper
+                .product__slide
+                  +img('slides/product', 'product-2', 'png', '76', '66')
+                .product__slide
+                  +img('slides/product', 'product-3', 'png', '76', '66')
+                .product__slide
+                  +img('slides/product', 'product-4', 'png', '76', '66')
+                .product__slide
+                  +img('slides/product', 'product-2', 'png', '76', '66')
+                .product__slide
+                  +img('slides/product', 'product-3', 'png', '76', '66')
+                .product__slide
+                  +img('slides/product', 'cert-1', 'png', '76', '66')
+                .product__slide
+                  +img('slides/product', 'cert-2', 'png', '76', '66')
+
+          .product__tabs
+            .product__tabs-controls
+              +btn({text: 'Описание'}).product__tab-control.is-active
+              +btn({text: 'Характеристики'}).product__tab-control
+
+          .product__tabs-content
+            .product__tab-content.is-active
+              p Дизельные генераторы мощностью 200 кВт вырабатывают 3-фазный электрический ток (частота 50 Гц, напряжение 400 В).
+              p Электростанции (дизельные генераторы) серии АД-200 используют в качестве источников электроэнергии на небольших объектах - в медицинских и учебных заведениях, АЗС, магазинах, коттеджных поселках, стройплощадках и т.д. Дизель генератор АД 200 может работать как в основном так и резервном режиме.
+              p Электростанцию АД-200 можно установить в капот, шумозащитный кожух, контейнер, а так же разместить на шасси для удобного перемещения.
+
+            .product__tab-content
+              p Дизельные генераторы мощностью 200 кВт вырабатывают 3-фазный электрический ток (частота 50 Гц, напряжение 400 В).
+              p Электростанции (дизельные генераторы) серии АД-200 используют в качестве источников электроэнергии на небольших объектах - в медицинских и учебных заведениях, АЗС, магазинах, коттеджных поселках, стройплощадках и т.д. Дизель генератор АД 200 может работать как в основном так и резервном режиме.
+              p Электростанцию АД-200 можно установить в капот, шумозащитный кожух, контейнер, а так же разместить на шасси для удобного перемещения.
+
+        .product__desc
+
+          h1.product__title.title.title--product Дизельный генератор Еuropower EPS 300 DXE DC
+          ul.product__spec
+            li Макс. мощность:
+              span 8 кВА
+            li Номин. мощность:
+              span 8 кВА
+            li Кол-во фаз:
+              span Три
+            li Объем бака:
+              span 63 литра
+
+          ul.product__features
+            li Принимают до 100% нагрузки единовременно
+            li Работают без сбоев даже на топливе низкого качества
+            li Требуют элементарного технического обслуживания
+
+          span.product__instock в наличии
+
+          .product__btns-container
+            +btn({text: "Заказать звонок"}).btn--blue.product__btn
+            +btn({text: "Все генераторы"}).btn--grey.product__btn
+
+          .product__service
+            p Даем гарантию до 5 лет и постгарантийное обслуживание.
+              span
+                +icon('icon-star', 22, 21)
+            p Осуществляем доставку личным транспортом или ТИ по всей России
+              span
+                +icon('icon-delivery', 27, 16)
+            p Являемся сертифицированным дистрибьютором генераторных установок
+              span
+                +icon('icon-licence', 13, 25)

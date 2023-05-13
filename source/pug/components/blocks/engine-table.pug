@@ -22,6 +22,13 @@ mixin engine-table()
 
 
   .engine-table
+    .engine-table__view
+      span Показано 256 позиций из 520
+      button(type="button").btn.btn--icon
+        +icon('icon-grid-view', 16, 16)
+      button(type="button").btn.btn--icon
+        +icon('icon-list-view', 16, 16)
+
     table
       thead
         tr
@@ -47,4 +54,4 @@ mixin engine-table()
                 span.engine-table__product-badge.badge.badge под заказ
                 +btn({text: 'Узнать цену'}).btn--bluetext
 
-  +pagination()
+    +pagination()

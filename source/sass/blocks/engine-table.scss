@@ -1,12 +1,35 @@
 .engine-table {
   width: 985px;
   margin-bottom: 40px;
+  margin-left: auto;
+
+  &__view {
+    display: flex;
+    margin-bottom: 20px;
+    span {
+      display: inline-block;
+      margin-right: auto;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+    }
+
+    .btn {
+      margin-left: 10px;
+    }
+  }
 
   table {
     // border-collapse: collapse;
-    border-collapse: separate;
-    border-spacing: 5px;
+    // border-collapse: separate;
+    // border-spacing: 5px;
     width: 100%;
+    width: 985px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    // font-weight: 600;
+    margin-bottom: 40px;
   }
 
   tbody tr:nth-child(odd) {
@@ -39,7 +62,8 @@
 
   table tr th,
   table tr td {
-    min-width: 127px;
+    // min-width: 127px;
+    width: 104px;
   }
 
   table tr th:first-of-type,
@@ -48,10 +72,17 @@
   }
 
   table tr th:nth-child(2),
+  table tr td:nth-child(2) {
+    width: 210px;
+  }
+
   table tr th:last-of-type,
-  table tr td:nth-child(2),
   table tr td:last-of-type {
-    min-width: 300px;
+    width: 255px;
+  }
+
+  table tr td:nth-child(2) {
+    font-weight: 600;
   }
 
   table tr td:last-of-type {
@@ -82,8 +113,7 @@
       fill: white;
     }
 
-    &:first-of-type,
-    &:last-of-type {
+    &:first-of-type {
       width: 100px;
       svg {
         display: none;
