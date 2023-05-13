@@ -3493,6 +3493,26 @@ button,
 .product__tab-content.is-active {
   display: block;
 }
+.product__tab-content table {
+  width: 100%;
+  border-collapse: collapse;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.product__tab-content table tr td {
+  padding: 15px 20px;
+}
+.product__tab-content table tr td:last-of-type {
+  text-align: right;
+}
+.product__tab-content table tr:nth-child(odd) {
+  background-color: #f0f3f7;
+}
+.product__tab-content table tr:nth-child(even) {
+  background-color: #e5e9ef;
+}
 .product__slider-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

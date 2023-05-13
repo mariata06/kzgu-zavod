@@ -153,6 +153,31 @@
     }
   }
 
+  &__tab-content table {
+    width: 100%;
+    border-collapse: collapse;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+
+    tr td {
+      padding: 15px 20px;
+    }
+
+    tr td:last-of-type {
+      text-align: right;
+    }
+
+    tr:nth-child(odd) {
+      background-color: $color-solitude;
+    }
+
+    tr:nth-child(even) {
+      background-color: $color-solitude-4;
+    }
+  }
+
   &__slider-wrapper {
     display: flex;
     justify-content: space-between;
