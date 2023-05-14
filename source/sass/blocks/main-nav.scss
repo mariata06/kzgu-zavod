@@ -8,7 +8,6 @@
     display: flex;
     margin: 0;
     margin-right: 20px;
-    // margin-left: 60px;
     padding: 0;
 
     list-style: none;
@@ -19,14 +18,11 @@
   }
 
   &__link {
-    // color: $color-default-white;
     color: $color-blue-whale;
     transition: all 0.3s ease-out;
 
     &.is-active {
-      // opacity: 0.6;
       color: $color-lochmara;
-      // color: red;
     }
 
     &:hover,

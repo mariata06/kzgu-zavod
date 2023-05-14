@@ -1,20 +1,6 @@
 .form {
   display: flex;
   flex-wrap: wrap;
-
-  // &__wrapper {
-  //   display: flex;
-  //   position: relative;
-
-  //   svg {
-  //     width: 17px;
-  //     height: 17px;
-  //     position: absolute;
-  //     right: 19px;
-  //     top: 50%;
-  //     transform: translateY(-50%);
-  //   }
-  // }
 }
 
 .form {
@@ -36,11 +22,6 @@
 
 
 .form--delivery {
-  // .custom-input, .btn--blue {
-  //   // width: 33%;
-  //   width: 426px;
-  // }
-
   input[type="text"],
   input[type="tel"],
   input[type="email"],

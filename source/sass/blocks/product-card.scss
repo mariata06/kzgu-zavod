@@ -1,8 +1,6 @@
 .product-card {
-  // width: 347px;
   width: 325px;
   height: 455px;
-  // padding: 30px;
   padding-top: 53px;
   padding-bottom: 25px;
   background-color: $color-solitude;
@@ -53,8 +51,6 @@
   width: 100%;
   transition: all 0.3s ease-out;
   transform: translateY(-60px);
-  // opacity: 0;
-  // visibility: hidden;
   z-index: -1;
   position: relative;
 
@@ -66,8 +62,6 @@
 
 .product-card:hover .product-card__btn,
 .product-card:focus .product-card__btn {
-  // opacity: 1;
-  // visibility: visible;
   transform: translateY(15px);
   z-index: 1;
 }

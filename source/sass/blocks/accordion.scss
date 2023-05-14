@@ -1,0 +1,41 @@
+.accordion {
+  width: 100%;
+
+  &__item {
+    width: 100%;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 500;
+    width: 100%;
+    background-color: transparent;
+    color: $color-blue-whale;
+    padding: 15px 0;
+    border-bottom: 1px solid $color-solitude-2;
+
+    svg {
+      min-width: 12px;
+      min-height: 8px;
+      fill: none;
+      stroke: $color-default-black;
+      stroke-width: 1.5;
+    }
+  }
+
+  &__content {
+    flex-wrap: wrap;
+    display: flex;
+    border-bottom: 1px solid $color-solitude-2;
+
+    .btn--bluetext {
+      font-size: 16px;
+      line-height: 25px;
+      padding: 5px 0;
+      margin-bottom: 25px;
+    }
+  }
+}

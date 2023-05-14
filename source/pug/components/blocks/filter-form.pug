@@ -1,0 +1,64 @@
+mixin filter-form()
+  .filter-form
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+
+    .accordion
+      h4.title.title--h4.filter-form__title Фильтры
+
+      form(action="#").form.form--filter
+        .accordion__item
+          button(type="button").btn.accordion__btn Максимальная мощность, кВа
+            +icon('icon-dropdown', 12, 8)
+
+          .accordion__content.form__wrapper
+            //- +custom-input({inputType: "range"})
+            .range-slider
+              span.range-slider__values
+              input(value="500" min="500" max="50000" step="500" type="range")
+              input(value="50000" min="500" max="50000" step="500" type="range")
+
+        .accordion__item
+          button(type="button").btn.accordion__btn Номинальная мощность, кВа
+            +icon('icon-dropdown', 12, 8)
+
+          .accordion__content.form__wrapper
+            +custom-input({inputType: "range"})
+
+        .accordion__item
+          button(type="button").btn.accordion__btn Двигатель/бренд
+            +icon('icon-dropdown', 12, 8)
+
+          .accordion__content.form__wrapper
+            +custom-input({inputType: 'checkbox', inputLabel: 'Doosan'})
+            +custom-input({inputType: 'checkbox', inputLabel: 'Volvo Penta', checked})
+            +custom-input({inputType: 'checkbox', inputLabel: 'Pentu'})
+            +custom-input({inputType: 'checkbox', inputLabel: 'Cummins'})
+            +custom-input({inputType: 'checkbox', inputLabel: 'Doosan'})
+            +custom-input({inputType: 'checkbox', inputLabel: 'Volvo Penta'})
+            +custom-input({inputType: 'checkbox', inputLabel: 'Pentu'})
+            +custom-input({inputType: 'checkbox', inputLabel: 'Cummins'})
+            +btn({text: 'Показать все'}).btn--bluetext
+
+        .accordion__item
+          button(type="button").btn.accordion__btn Количество фаз
+            +icon('icon-dropdown', 12, 8)
+
+          .accordion__content.form__wrapper
+            +custom-input({inputType: 'checkbox', inputLabel: 'три'})
+            +custom-input({inputType: 'checkbox', inputLabel: 'четыре'})
+            +custom-input({inputType: 'checkbox', inputLabel: 'три'})
+            +custom-input({inputType: 'checkbox', inputLabel: 'четыре'})
+
+        .accordion__item
+          button(type="button").btn.accordion__btn Объем бака, л
+            +icon('icon-dropdown', 12, 8)
+
+          .accordion__content.form__wrapper
+            +custom-input({inputType: 'checkbox', inputLabel: '63 л'})
+            +custom-input({inputType: 'checkbox', inputLabel: '150 л'})
+            +custom-input({inputType: 'checkbox', inputLabel: '63 л'})
+            +custom-input({inputType: 'checkbox', inputLabel: '150 л'})
+
+        +btn({text: 'Применить', type: "submit"}).btn--blue
+        +btn({text: 'Сбросить фильтр', type: "button"}).btn--greytext

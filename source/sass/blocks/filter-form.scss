@@ -1,0 +1,18 @@
+.filter-form {
+  width: 335px;
+
+  &__title {
+    padding-bottom: 15px;
+    color: $color-blue-whale;
+    border-bottom: 1px solid $color-solitude-2;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .btn--greytext {
+    width: 100%;
+  }
+}

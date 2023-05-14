@@ -3,8 +3,6 @@
   position: relative;
 
   display: flex;
-  // width: 530px;
-  // width: 478px;
   padding: size(14px) 0 28px 0;
 
   @media screen and (max-width: 767px) {
@@ -149,5 +147,26 @@
   svg {
     margin-right: 20px;
     order: -1
+  }
+}
+
+
+.custom-input {
+  width: 100%;
+  input[type="checkbox"] {
+    order: -1;
+    width: 18px;
+    height: 18px;
+    max-width: unset;
+    min-width: unset;
+    flex-grow: unset;
+    margin-left: unset;
+    margin-right: 10px;
+    min-height: unset;
+  }
+
+  .custom-input__label {
+    padding: 5px 0;
+    color: $color-blue-whale;
   }
 }

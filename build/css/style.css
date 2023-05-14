@@ -974,6 +974,22 @@ button,
   font-weight: 600;
 }
 
+.btn--greytext {
+  padding: 15px 0;
+  background-color: transparent;
+  color: rgba(9, 46, 71, 0.35);
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 254px;
+}
+
 .btn--icon {
   padding: 0;
   background-color: transparent;
@@ -1196,6 +1212,29 @@ button,
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
+}
+
+.custom-input {
+  width: 100%;
+}
+.custom-input input[type=checkbox] {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  width: 18px;
+  height: 18px;
+  max-width: unset;
+  min-width: unset;
+  -webkit-box-flex: unset;
+      -ms-flex-positive: unset;
+          flex-grow: unset;
+  margin-left: unset;
+  margin-right: 10px;
+  min-height: unset;
+}
+.custom-input .custom-input__label {
+  padding: 5px 0;
+  color: #092e47;
 }
 
 .custom-toggle {
@@ -3178,20 +3217,20 @@ button,
   margin-bottom: 40px;
   margin-left: auto;
 }
-.engine-table__view {
+.engine-table__btns-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
 }
-.engine-table__view span {
+.engine-table__btns-container span {
   display: inline-block;
   margin-right: auto;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
 }
-.engine-table__view .btn {
+.engine-table__btns-container .btn {
   margin-left: 10px;
 }
 .engine-table table {
@@ -3289,7 +3328,7 @@ button,
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.engine-table__grid {
+.engine-table__view--grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 325px 325px 325px;
@@ -3299,6 +3338,12 @@ button,
           column-gap: 5px;
   row-gap: 5px;
   margin-bottom: 40px;
+}
+.engine-table__view {
+  display: none;
+}
+.engine-table__view.is-active {
+  display: block;
 }
 
 .product {
@@ -3589,6 +3634,118 @@ button,
       -ms-transform: translateY(15px);
           transform: translateY(15px);
   z-index: 1;
+}
+
+.filter-form {
+  width: 335px;
+}
+.filter-form__title {
+  padding-bottom: 15px;
+  color: #092e47;
+  border-bottom: 1px solid #e1e8fb;
+}
+.filter-form button[type=submit] {
+  width: 100%;
+  margin-top: 30px;
+}
+.filter-form .btn--greytext {
+  width: 100%;
+}
+
+.filter__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.accordion {
+  width: 100%;
+}
+.accordion__item {
+  width: 100%;
+}
+.accordion__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 500;
+  width: 100%;
+  background-color: transparent;
+  color: #092e47;
+  padding: 15px 0;
+  border-bottom: 1px solid #e1e8fb;
+}
+.accordion__btn svg {
+  min-width: 12px;
+  min-height: 8px;
+  fill: none;
+  stroke: #000000;
+  stroke-width: 1.5;
+}
+.accordion__content {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #e1e8fb;
+}
+.accordion__content .btn--bluetext {
+  font-size: 16px;
+  line-height: 25px;
+  padding: 5px 0;
+  margin-bottom: 25px;
+}
+
+.range-slider {
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+.range-slider input[type=range] {
+  pointer-events: none;
+  position: absolute;
+  -webkit-appearance: none;
+  left: 0;
+  top: 50px;
+}
+.range-slider input[type=range]::-webkit-slider-thumb {
+  pointer-events: all;
+  position: relative;
+  z-index: 1;
+  outline: 0;
+  -webkit-appearance: none;
+}
+.range-slider input[type=range]::-moz-range-thumb {
+  pointer-events: all;
+  position: relative;
+  z-index: 10;
+  -moz-appearance: none;
+}
+.range-slider input[type=range]::-ms-thumb {
+  pointer-events: all;
+  position: relative;
+  z-index: 10;
+  -ms-appearance: none;
+}
+.range-slider input[type=range]::-moz-range-track {
+  position: relative;
+  z-index: -1;
+  background-color: rgb(0, 0, 0);
+  border: 0;
+}
+.range-slider input[type=range]:last-of-type::-moz-range-track {
+  -moz-appearance: none;
+  background: none transparent;
+  border: 0;
 }
 
 /* @mixin hover-focus {
