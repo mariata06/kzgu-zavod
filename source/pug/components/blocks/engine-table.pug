@@ -20,13 +20,12 @@ mixin engine-table()
     {image: 'gen-1', name: 'Еuropower EPS 300 DXE DC', maxpower: '8,8 кВа',nompower: '8 кВа',stage: 'три',volume: '63 л', stock:true},
     ]
 
-
-  .engine-table
+  .engine-table.engine-table--list-view
     .engine-table__view
       span Показано 256 позиций из 520
-      button(type="button").btn.btn--icon
+      button(type="button").btn.btn--icon.engine-table__btn-view
         +icon('icon-grid-view', 16, 16)
-      button(type="button").btn.btn--icon
+      button(type="button").btn.btn--icon.engine-table__btn-view.is-active
         +icon('icon-list-view', 16, 16)
 
     table
@@ -53,5 +52,12 @@ mixin engine-table()
               else
                 span.engine-table__product-badge.badge.badge под заказ
                 +btn({text: 'Узнать цену'}).btn--bluetext
+
+    +pagination()
+
+  .engine-table.engine-table--grid-view
+    .engine-table__grid
+      each item in table
+        +product-card(item)
 
     +pagination()

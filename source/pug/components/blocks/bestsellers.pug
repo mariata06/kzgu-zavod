@@ -1,10 +1,9 @@
-mixin bestsellers(title)
+mixin bestsellers(title, data)
   section.bestsellers
     //- вставлять блоки во внешний контейнер неверно
     //- все блоки содержат в себе container без доп класса tutorial__wrapper
     .container
       .bestsellers__slider
-
         h2.bestsellers__title.title.title--h1 !{title}
         .bestsellers__slider-nav.slider-nav
           button.btn.btn--slider-prev
@@ -12,58 +11,8 @@ mixin bestsellers(title)
           button.btn.btn--slider-next
             +icon("icon-arrow-left", 11, 16)
         .bestsellers__slider-wrapper
-          .bestsellers__slide
-            a(href="product.html").bestsellers__product-link
-              .bestsellers__product
-                span.bestsellers__product-badge.badge.badge--green в наличии
-                +img('slides', 'product_1', 'png', 210, 185)
-                p.bestsellers__product-name Генератор Еuropower EPS 300 DXE DC дизельный
-                ul.bestsellers__product-features
-                  li Макс. мощность: 8,8 кВА
-                  li Номин. мощность: 8 кВА
-                  li Кол-во фаз: три
-                  li Объем бака: 63 литра
-              .bestsellers__product-btn
-                +btn({text: 'Узнать цену'}).btn--blue
-
-          .bestsellers__slide
-            a(href="product.html").bestsellers__product-link
-              .bestsellers__product
-                span.bestsellers__product-badge.badge.badge--green в наличии
-                +img('slides', 'product_2', 'png', 210, 185)
-                p.bestsellers__product-name Генератор Еuropower EP 2800 D дизельный
-                ul.bestsellers__product-features
-                  li Макс. мощность: 8,8 кВА
-                  li Номин. мощность: 8 кВА
-                  li Кол-во фаз: три
-                  li Объем бака: 63 литра
-              .bestsellers__product-btn
-                +btn({text: 'Узнать цену'}).btn--blue
-
-          .bestsellers__slide
-            a(href="product.html").bestsellers__product-link
-              .bestsellers__product
-                span.bestsellers__product-badge.badge под заказ
-                +img('slides', 'product_3', 'png', 210, 185)
-                p.bestsellers__product-name Генератор Еuropower EPS 8 DE дизельный
-                ul.bestsellers__product-features
-                  li Макс. мощность: 8,8 кВА
-                  li Номин. мощность: 8 кВА
-                  li Кол-во фаз: три
-                  li Объем бака: 63 литра
-              .bestsellers__product-btn
-                +btn({text: 'Узнать цену'}).btn--blue
-
-          .bestsellers__slide
-            a(href="product.html").bestsellers__product-link
-              .bestsellers__product
-                span.bestsellers__product-badge.badge.badge--green в наличии
-                +img('slides', 'product_4', 'png', 210, 185)
-                p.bestsellers__product-name Генератор Еuropower EPS 300 DXE DC дизельный
-                ul.bestsellers__product-features
-                  li Макс. мощность: 8,8 кВА
-                  li Номин. мощность: 8 кВА
-                  li Кол-во фаз: три
-                  li Объем бака: 63 литра
-              .bestsellers__product-btn
-                +btn({text: 'Узнать цену'}).btn--blue
+          each slide in data
+            .bestsellers__slide
+              a(href="product.html").bestsellers__product-link
+                .bestsellers__product
+                  +product-card(slide)

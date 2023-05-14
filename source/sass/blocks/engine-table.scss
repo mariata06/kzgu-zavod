@@ -124,4 +124,12 @@
   table tr td:last-of-type {
     justify-content: space-between;
   }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 325px 325px 325px;
+    column-gap: 5px;
+    row-gap: 5px;
+    margin-bottom: 40px;
+  }
 }
