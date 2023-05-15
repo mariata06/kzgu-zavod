@@ -5,6 +5,8 @@ import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {initNavigation} from './modules/init-navigation';
 // import {initMap} from './modules/init-map';
+// import {initRangeSlider} from './modules/init-range-slider';
+import {initRangeSlider} from './modules/init-range-slider';
 
 // ---------------------------------
 
@@ -16,7 +18,8 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   initNavigation();
   // initMap();
-
+  // initRangeSlider();
+  initRangeSlider();
   // Modules
   // ---------------------------------
 
