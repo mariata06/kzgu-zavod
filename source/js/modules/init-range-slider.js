@@ -1,41 +1,48 @@
 const initRangeSlider = () => {
   const rangeInput = document.querySelectorAll('.range-slider__controls input');
   const priceInput = document.querySelectorAll('.range-slider__price input');
-  const range = document.querySelector('.range-slider__progress');
+  const rangeAll = document.querySelectorAll('.range-slider__progress');
   let priceGap = 0.1;
 
-  priceInput.forEach((input) => {
+  priceInput.forEach((input, i) => {
+    let k = 2 * Math.floor(i / 2); // 0,1 -> 0   2,3-> 2    4,5 -> 4 ...
     input.addEventListener('input', (e) =>{
-      let minPrice = parseFloat(priceInput[0].value, 10);
-      let maxPrice = parseFloat(priceInput[1].value, 10);
+      let range = rangeAll[k / 2];
 
-      if ((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max) {
+      let minPrice = parseFloat(priceInput[k].value, 10);
+      let maxPrice = parseFloat(priceInput[k + 1].value, 10);
+
+      if ((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[k + 1].max) {
         if (e.target.className === 'range-slider__price-min') {
-          rangeInput[0].value = minPrice;
-          range.style.left = ((minPrice / rangeInput[0].max) * 100) + '%';
+          rangeInput[k].value = minPrice;
+          range.style.left = ((minPrice / rangeInput[k].max) * 100) + '%';
         } else {
-          rangeInput[1].value = maxPrice;
-          range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + '%';
+          rangeInput[k + 1].value = maxPrice;
+          range.style.right = 100 - (maxPrice / rangeInput[k + 1].max) * 100 + '%';
         }
       }
     });
   });
 
-  rangeInput.forEach((input) =>{
+  rangeInput.forEach((input, i) =>{
+    let k = 2 * Math.floor(i / 2); // 0,1 -> 0   2,3-> 2    4,5 -> 4 ...
     input.addEventListener('input', (e) =>{
-      let minVal = parseFloat(rangeInput[0].value, 10);
-      let maxVal = parseFloat(rangeInput[1].value, 10);
+      let range = rangeAll[k / 2];
+
+      let minVal = parseFloat(rangeInput[k].value, 10);
+      let maxVal = parseFloat(rangeInput[k + 1].value, 10);
+
       if ((maxVal - minVal) < priceGap) {
         if (e.target.className === 'range-slider__control-min') {
-          rangeInput[0].value = maxVal - priceGap;
+          rangeInput[k].value = maxVal - priceGap;
         } else {
-          rangeInput[1].value = minVal + priceGap;
+          rangeInput[k + 1].value = minVal + priceGap;
         }
       } else {
-        priceInput[0].value = minVal;
-        priceInput[1].value = maxVal;
-        range.style.left = ((minVal / rangeInput[0].max) * 100) + '%';
-        range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + '%';
+        priceInput[k].value = minVal;
+        priceInput[k + 1].value = maxVal;
+        range.style.left = ((minVal / rangeInput[k].max) * 100) + '%';
+        range.style.right = 100 - (maxVal / rangeInput[k + 1].max) * 100 + '%';
       }
     });
   });

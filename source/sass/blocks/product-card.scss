@@ -50,7 +50,9 @@
   padding: 10px;
   width: 100%;
   transition: all 0.3s ease-out;
-  transform: translateY(-60px);
+  // transform: translateY(-60px);
+  //кнопка выпрыгивает под карточкой
+  transform: scaleY(0);
   z-index: -1;
   position: relative;
 
@@ -62,6 +64,9 @@
 
 .product-card:hover .product-card__btn,
 .product-card:focus .product-card__btn {
-  transform: translateY(15px);
+  // transform: translateY(15px);
   z-index: 1;
+  //кнопка выпрыгивает под карточкой
+  transform: scaleY(1);
+  transform-origin: 0 0;
 }

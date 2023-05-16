@@ -21,12 +21,10 @@ mixin filter-form()
 
               .range-slider__price
                 .range-slider__price-field
-                  //- span Min
                   input(value="1.6" type="number" class="range-slider__price-min")
                   span от
                 .range-slider__separator
                 .range-slider__price-field
-                  //- span Max
                   input(value="3.2" type="number" class="range-slider__price-max")
                   span до
 
@@ -34,8 +32,22 @@ mixin filter-form()
           button(type="button").btn.accordion__btn Номинальная мощность, кВа
             +icon('icon-dropdown', 12, 8)
 
-          //- .accordion__content.form__wrapper
-          //-   +custom-input({inputType: "range"})
+          .accordion__content.form__wrapper
+            .range-slider
+              .range-slider__progress-container
+                .range-slider__progress
+              .range-slider__controls
+                input(value="1.6" min="0" max="10" step="0.1" type="range" class="range-slider__control-min")
+                input(value="3.2" min="0" max="10" step="0.1" type="range" class="range-slider__control-max")
+
+              .range-slider__price
+                .range-slider__price-field
+                  input(value="1.6" type="number" class="range-slider__price-min")
+                  span от
+                .range-slider__separator
+                .range-slider__price-field
+                  input(value="3.2" type="number" class="range-slider__price-max")
+                  span до
 
         .accordion__item
           button(type="button").btn.accordion__btn Двигатель/бренд
