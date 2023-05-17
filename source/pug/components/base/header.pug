@@ -3,11 +3,75 @@ mixin header(headerMods, currentUrl)
     const headerLinks = [
       {
         href: "catalog.html",
-        text: "Каталог продукции"
+        text: "Каталог продукции",
+        subMenu1: [
+          {
+            href: 'catalog.html',
+            text: 'Каталог оборудования',
+            subMenu2: [
+              {
+                href: '',
+                text: 'Дизельные генераторы',
+                subMenu3: [
+                  {
+                    href: '',
+                    text: 'Блок-контейнер медицинский'
+                  },
+                  {
+                    href: '',
+                    text: 'Блок-контейнеры под лаборатории'
+                  },
+                  {
+                    href: '',
+                    text: 'Блок-контейнеры средств связи'
+                  },
+                  {
+                    href: '',
+                    text: 'Блок-контейнеры технические'
+                  },
+                  {
+                    href: '',
+                    text: 'Блок-контейнеры под котельные'
+                  },
+                  {
+                    href: '',
+                    text: 'Блок-контейнеры под аппаратные'
+                  },
+                ]
+              },
+              {
+                href: '',
+                text: 'Блок-контейнер под оборудование'
+              },
+              {
+                href: '',
+                text: 'Блок-контейнер под металлоконструкции'
+              },
+              {
+                href: '',
+                text: 'Дополнительное оборудование'
+              },
+            ]
+          },
+          {
+            href: 'catalog.html',
+            text: 'Каталог запчастей'
+          },
+          {
+            href: 'catalog.html',
+            text: 'Аренда оборудования'
+          },
+        ]
       },
       {
         href: "company.html",
-        text: "О компании"
+        text: "О компании",
+        subMenu1: [
+          {
+            href: 'catalog.html',
+            text: 'Сертификаты'
+          },
+        ]
       },
       {
         href: "news.html",
@@ -60,6 +124,22 @@ mixin header(headerMods, currentUrl)
                   span.main-nav__link.is-active=link.text
                 else
                   a.main-nav__link(href=link.href)=link.text
+
+                  if(link.subMenu1)
+                    ul.main-nav__sub-menu1
+                      each link1 in link.subMenu1
+                        li.main-nav__sub-item !{link1.text}
+
+                            if(link1.subMenu2)
+                              ul.main-nav__sub-menu2
+                                each link2 in link1.subMenu2
+                                  li.main-nav__sub-item !{link2.text}
+
+                                      if(link2.subMenu3)
+                                        ul.main-nav__sub-menu3
+                                          each link3 in link2.subMenu3
+                                            li.main-nav__sub-item !{link3.text}
+
         .main-nav__contacts
           .main-nav__social.social
             a(href="#")
