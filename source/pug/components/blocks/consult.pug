@@ -8,7 +8,7 @@ mixin consult(messageField, uploadFile, {formTitle, formNote})
         p !{formNote}
 
       .consult__form-wrapper
-        form(action="#" metod="POST")&attributes(attributes).form
+        form(action="#" method="POST")&attributes(attributes).form
           .form__wrapper
             +custom-input({inputPlaceholder: "Ваше имя", inputType: "text"})
           .form__wrapper

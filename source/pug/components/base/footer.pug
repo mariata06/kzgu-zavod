@@ -69,10 +69,10 @@ mixin footer(footerMods)
         if(currentUrl === "index.html")
           //- lighthouse снимает 10 баллов SEO за <a> без href
           span.footer__logo
-            +img("content", "logo", "png", 183, 55)
+            +img("content", "logo", "png", 183, 55, "Логотип предприятия")
         else
           a.footer__logo(href="index.html", aria-label="Переход на главную")
-            +img("content", "logo", "png", 183, 55)
+            +img("content", "logo", "png", 183, 55, "Логотип предприятия")
         .footer__social.social
           a(href="#")
             +icon("icon-watsapp", 25, 25)

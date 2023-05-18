@@ -6,7 +6,7 @@ mixin last-news()
       .last-news__content
         .last-news__heading
           h2.last-news__title.title.title--h1 Последние<br> новости
-          +btn({text: "Смотреть все", href: "news.html"}).btn--blue.news__btn
+          +btn({text: "Смотреть все", href: "news.html"}).btn--blue.last-news__btn
 
         .last-news__wrapper
           each news in lastnews

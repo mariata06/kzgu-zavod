@@ -31,6 +31,10 @@
 
 .mainscreen__tabs-desc {
   width: 762px;
+
+  @media (max-width: 1023px) {
+    width: 50%;
+  }
 }
 
 .mainscreen__tabs-title {
@@ -58,6 +62,13 @@
 
   &.is-active {
     display: flex;
+  }
+
+  img {
+    @media (max-width: 1023px) {
+      width: 400px;
+      height: 400px;
+    }
   }
 }
 

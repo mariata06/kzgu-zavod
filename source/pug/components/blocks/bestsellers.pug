@@ -13,6 +13,5 @@ mixin bestsellers(title, data)
         .bestsellers__slider-wrapper
           each slide in data
             .bestsellers__slide
-              a(href="product.html").bestsellers__product-link
-                .bestsellers__product
-                  +product-card(slide)
+              .bestsellers__product
+                +product-card(slide)

@@ -2,6 +2,10 @@
   position: relative;
   min-height: 800px;
 
+  @media (max-width: 1439px) {
+    min-height: 600px;
+  }
+
   &__bg-img {
     width: 100%;
     position: absolute;
@@ -18,6 +22,10 @@
     margin: 0 auto;
     margin: auto;
     padding-top: 149px;
+
+    @media (max-width: 1689px) {
+      padding-top: 50px;
+    }
   }
 
   &__item {
@@ -26,6 +34,10 @@
     padding: 31px 30px;
     min-height: 502px;
     transition: all 0.3s ease-out;
+
+    @media (max-width: 1023px) {
+      min-height: 320px;
+    }
 
     &:hover {
       background-color: $color-navy-blue;

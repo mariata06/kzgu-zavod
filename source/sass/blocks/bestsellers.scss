@@ -5,6 +5,14 @@
   &__slide {
     width: 347px;
 
+    @media (max-width: 1439px) {
+      width: 300px;
+    }
+
+    @media (max-width: 1023px) {
+      width: 220px;
+    }
+
     .product-card {
       width: 100%;
     }

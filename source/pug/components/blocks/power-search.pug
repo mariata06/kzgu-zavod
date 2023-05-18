@@ -8,7 +8,6 @@ mixin power-search()
     .container
       .power-search__type
         p Быстрый подбор по мощности:
-        ul.power-search__list
+        .power-search__list
           each item in list
-            a(href="#")
-              li !{item}
+            a(href="#") !{item}

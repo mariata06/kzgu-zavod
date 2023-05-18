@@ -98,12 +98,12 @@ mixin header(headerMods, currentUrl)
         if(currentUrl === "index.html")
           //- lighthouse снимает 10 баллов SEO за <a> без href
           span.header__logo
-            +img("content", "logo", "png", 183, 55)
+            +img("content", "logo", "png", 183, 55, "Логотип предприятия")
         else
           a.header__logo(href="index.html", aria-label="Переход на главную")
-            +img("content", "logo", "png", 183, 55)
+            +img("content", "logo", "png", 183, 55, "Логотип предприятия")
         .search-form
-          form(action="#" metod="POST").form
+          form(action="#" method="POST").form
             .form__wrapper
               +custom-input({inputPlaceholder: "Поиск по продукции и разделам", inputType: "text"})
               +icon("icon-search", 17, 17)

@@ -6,8 +6,8 @@ mixin specialist()
       h2.specialist__title.title.title--h1 Специалисты КЗГУ проектируют оборудование, объединяющее лучшие достижения российских и зарубежных инженеров
 
       .specialist__content
-        .specialits__img-wrapper
-          +img('content', 'specialist_img', 'png', 887, 420)
+        .specialist__img-wrapper
+          +img('content', 'specialist_img', 'png', 887, 420, 'на заводе')
 
           .specialist__numbers
             .specialist__number
@@ -30,7 +30,7 @@ mixin specialist()
 
           .specialist__video
             .specialist__video-wrapper
-              +img('content', 'video_img', 'png', 170, 170)
+              +img('content', 'video_img', 'png', 170, 170, 'постер')
               button(type="button").btn.specialist__video-btn
                 +icon('icon-play', 36, 30)
             span Посмотрите видео с нашего производства

@@ -2,6 +2,10 @@
   width: 698px;
   position: relative;
 
+  @media (max-width: 1439px) {
+    width: 100%;
+  }
+
   &:hover {
     .project-card__wrapper {
       opacity: 90%;

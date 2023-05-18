@@ -12,6 +12,10 @@
   input[type="email"] {
     width: 315px;
     border: 1px solid $color-link-water;
+
+    @media (max-width: 1023px) {
+      width: 30%;
+    }
   }
 }
 

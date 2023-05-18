@@ -1,5 +1,10 @@
 .footer-nav {
   width: 663px;
+
+  @media (max-width: 1023px) {
+    width: 50%;
+    margin-right: 50px;
+  }
 }
 
 .footer-nav__list {
@@ -15,6 +20,11 @@
 .footer-nav__wrapper {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1023px) {
+    // justify-content: space-around;
+    flex-wrap: wrap;
+  }
 }
 
 .footer-nav__item {

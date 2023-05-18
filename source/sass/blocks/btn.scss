@@ -46,12 +46,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 1023px) {
+    font-size: 12px;
+    line-height: 20px;
+    width: 200px;
+  }
 }
 
 .btn--blue {
   background-color: $color-navy-blue;
   padding: 15px 0;
   width: 254px;
+
+  @media (max-width: 1023px) {
+    width: 180px;
+  }
 }
 
 .btn--grey {

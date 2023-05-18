@@ -5,6 +5,10 @@
   &__info {
     display: flex;
     padding-left: 40px;
+
+    @media (max-width: 1439px) {
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -15,6 +19,12 @@
     border: 1px solid $color-solitude-2;
     background-color: $color-default-white;
     margin-left: -40px;
+
+    @media (max-width: 1439px) {
+      min-width: 250px;
+      width: 250px;
+      height: 250px;
+    }
 
     svg {
       top: 123px;
@@ -27,6 +37,11 @@
     img {
       transition: all 0.3s ease-out;
       opacity: 0;
+
+      @media (max-width: 1439px) {
+        width: 250px;
+        height: 250px;
+      }
     }
 
     &:hover {
@@ -44,6 +59,10 @@
 
       .users__item-name {
         color: $color-default-white;
+
+        @media (max-width: 1439px) {
+          color: $color-blue-whale;
+        }
       }
     }
   }
@@ -68,5 +87,9 @@
     left: 50%;
     transform: translateX(-50%);
     transition: all 0.3s ease-out;
+
+    @media (max-width: 1439px) {
+      top: 250px;
+    }
   }
 }

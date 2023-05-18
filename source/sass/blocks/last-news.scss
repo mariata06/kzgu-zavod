@@ -13,6 +13,10 @@
   flex-wrap: wrap;
   width: 928px;
   justify-content: space-between;
+
+  @media (max-width: 1023px) {
+    justify-content: center;
+  }
 }
 
 .last-news__heading {

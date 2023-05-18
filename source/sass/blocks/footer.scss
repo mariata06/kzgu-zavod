@@ -10,6 +10,11 @@
   &__wrapper {
     width: 210px;
     margin-right: 145px;
+
+    @media (max-width: 1023px) {
+      width: 25%;
+      margin-right: 50px;
+    }
   }
 
   &__copyright {

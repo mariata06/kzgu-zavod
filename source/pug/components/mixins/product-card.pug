@@ -8,7 +8,7 @@ mixin product-card(data)
     else
       span.product-card__badge.badge.badge--grey под заказ
 
-    +img('slides', image, 'png', 210, 185)
+    +img('slides', image, 'png', 210, 185, 'генератор')
     p.product-card__name !{name}
     ul.product-card__features
       li Макс. мощность: !{maxpower}
@@ -16,4 +16,4 @@ mixin product-card(data)
       li Кол-во фаз: !{stage}
       li Объем бака: !{volume}
     .product-card__btn
-      +btn({text: 'Узнать цену'}).btn--blue
+      +btn({text: 'Узнать цену', href: 'product.html'}).btn--blue

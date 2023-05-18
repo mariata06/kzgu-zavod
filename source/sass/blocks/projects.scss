@@ -5,6 +5,10 @@
   &__slide {
     width: 698px;
     margin-bottom: 4px;
+
+    @media (max-width: 1439px) {
+      width: 48%;
+    }
   }
 
   &__slider-wrapper {

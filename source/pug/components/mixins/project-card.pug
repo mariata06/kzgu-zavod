@@ -2,9 +2,8 @@ mixin project-card(data)
   - const images = data;
 
   .project-card
-    a(href="#").project-card__link
-      +img(images.path, images.image, images.format, images.width, images.height)
-      h4.project-card__title.title.title--h4 Дизельный гинератор для ООО «Татнефть»
-      .project-card__wrapper
-        p.project-card__desc Произвели дизельный генератор для ООО «Татнефть» , так же установили блок-контейнер под оборудование. Произвели дизельный генератор для ООО «Татнефть» , так же установили блок-контейнер под оборудование
-        +btn({text: "Получить консультацию"}).btn--white.project-card__btn
+    +img(images.path, images.image, images.format, images.width, images.height, 'Произвели дизельный генератор')
+    h4.project-card__title.title.title--h4 Дизельный гинератор для ООО «Татнефть»
+    .project-card__wrapper
+      p.project-card__desc Произвели дизельный генератор для ООО «Татнефть» , так же установили блок-контейнер под оборудование. Произвели дизельный генератор для ООО «Татнефть» , так же установили блок-контейнер под оборудование
+      +btn({text: "Получить консультацию", href: 'project.html'}).btn--white.project-card__btn
